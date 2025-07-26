@@ -1,0 +1,13 @@
+[project]
+name = "mcp-sysinfo"
+version = "0.1.0"
+description = "Simple mcp server to view system information"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "gputil>=1.4.0",
+    "httpx>=0.28.1",
+    "lib-platform>=1.2.10",
+    "mcp[cli]>=1.5.0",
+    "psutil>=7.0.0",
+]

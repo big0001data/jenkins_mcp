@@ -1,0 +1,22 @@
+{
+    "mcpServers": {
+        "fetch_info": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "/home/user/github_simple_mcp/mcp-sysinfo",
+                "run",
+                "fetech_info.py"
+            ]
+        },
+        "sysinfo": {
+            "command": "uv",
+            "args": [
+                "--directory",
+                "/home/user/github_simple_mcp/mcp-sysinfo",
+                "run",
+                "sysinfo.py"
+            ]
+        }
+    }
+}
