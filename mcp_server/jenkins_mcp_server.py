@@ -2,7 +2,7 @@ from typing import Any
 from mcp.server.fastmcp import FastMCP
 from fetch_info import get_system_info
 
-#jenkins_url='127.0.0.1'
+jenkins_url=''#'127.0.0.1'
 # Initialize FastMCP server
 mcp = FastMCP("sysinfo")
 
@@ -25,7 +25,7 @@ async def get_sysinfo() -> str:
 
 # The job list request uses the GET method.
 # No request body or Content-Type header is required.
-@mcp.tool("Get Jenkins Job List")
+@mcp.tool()
 def get_jenkins_job_list():
     # Send GET request
     try:
@@ -64,13 +64,13 @@ def get_jenkins_job_list():
         print(f"Request failed: {e}")
 
 # New tool: Provide Jenkins server URL
-@mcp.tool("Get Jenkins Server URL", description="Returns the Jenkins server URL. (젠킨스 서버의 주소를 반환합니다.)")
+@mcp.tool()
 def get_jenkins_server_url():
     """Returns the Jenkins server URL."""
     return jenkins_url
 
 # New tool: Check Jenkins server connection
-@mcp.tool("Check Jenkins Server Connection", description="Checks if the Jenkins server is accessible with the configured credentials.")
+@mcp.tool()
 def check_jenkins_server_connection():
     """Attempts to connect to the Jenkins server and returns whether the connection is successful."""
     try:
@@ -88,7 +88,7 @@ def check_jenkins_server_connection():
     except requests.exceptions.RequestException as e:
         return f"Connection error: {e}"
 
-@mcp.tool("Create Jenkins Job", description="Creates a new Jenkins job with the given name and configuration XML file path.")
+@mcp.tool()
 def jenkins_server_create_job(job_name: str, job_config_path: str) -> str:
     """
     Creates a new Jenkins job using the provided job name and job configuration XML file path.
@@ -122,7 +122,7 @@ def jenkins_server_create_job(job_name: str, job_config_path: str) -> str:
     except Exception as e:
         return f"Unexpected error: {e}"
 
-@mcp.tool("Build Jenkins Job", description="Triggers a build for the specified Jenkins job name.")
+@mcp.tool()
 def jenkins_server_build_job(job_name: str) -> str:
     """
     Triggers a build for the specified Jenkins job.
