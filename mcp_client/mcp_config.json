@@ -4,7 +4,7 @@
             "command": "uv",
             "args": [
                 "--directory",
-                "/home/user/github_simple_mcp/mcp-sysinfo",
+                "/home/user/jenkins_mcpp/mcp_server",
                 "run",
                 "fetech_info.py"
             ]
@@ -13,7 +13,7 @@
             "command": "uv",
             "args": [
                 "--directory",
-                "/home/user/github_simple_mcp/mcp-sysinfo",
+                "/home/user/jenkins_mcp/mcp_server",
                 "run",
                 "sysinfo.py"
             ]
