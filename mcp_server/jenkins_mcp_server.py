@@ -2,6 +2,7 @@ from typing import Any
 from mcp.server.fastmcp import FastMCP
 from fetch_info import get_system_info
 
+#jenkins_url='127.0.0.1'
 # Initialize FastMCP server
 mcp = FastMCP("sysinfo")
 
