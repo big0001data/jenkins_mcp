@@ -1,4 +1,4 @@
-This Jenkins mcp codes provide how the jenkins server codes can be made and jenkins client codes can be made.
+This Jenkins mcp server codes provide how the jenkins server codes can be made and jenkins client codes can be made.
 
 The sysinfo.py provide the information about CPU and computer's information as example.
 
