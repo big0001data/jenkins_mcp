@@ -9,7 +9,7 @@
                 "fetech_info.py"
             ]
         },
-        "sysinfo": {
+        "jenkins_mcp": {
             "command": "uv",
             "args": [
                 "--directory",
